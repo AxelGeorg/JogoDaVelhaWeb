@@ -110,6 +110,6 @@ export class JogoDaVelhaComponent implements OnInit {
    * @return void
    */
   novoJogo(): void {
-    this.jogoDaVelhaService.i
+    this.jogoDaVelhaService.novoJogo();
   }
 }

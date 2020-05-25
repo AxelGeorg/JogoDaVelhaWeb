@@ -105,7 +105,8 @@ export class JogoDaVelhaService {
    */
   jogar(posX: number, posY: number): void {
     //jogada inválida
-    if (this.tabuleiro[posX][posY] !== this.VAZIO || this.vitoria) {
+    if (this.tabuleiro[posX][posY] !== this.VAZIO ||
+      this.vitoria) {
       return;
     }
 
@@ -225,6 +226,7 @@ export class JogoDaVelhaService {
         if (this.fimJogo(lin,col,tab,jogador)) {
           return [lin,col];
         }
+        tab[lin][col] = this.VAZIO;
       }
     }
     return [];
